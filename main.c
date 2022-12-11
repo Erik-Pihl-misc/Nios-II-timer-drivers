@@ -1,6 +1,5 @@
 /********************************************************************************
-* main.c: Implementering av timers via strukten timer samt associerade
-*         drivrutiner.
+* main.c: Implementering av timers via strukten timer samt drivrutiner.
 ********************************************************************************/
 #include "timer.h"
 #include "sys/alt_stdio.h"

@@ -1,14 +1,14 @@
 /********************************************************************************
 * timer.h: Innehåller drivrutiner för timers som kan sättas till att löpa ut
 *          efter godtycklig tid. Efter initiering är godtycklig timerkrets
-*          aktiverad efter start och det enda som behövsför att kontrollera
+*          aktiverad efter start och det enda som behövs för att kontrollera
 *          ifall timern har löpt ut är att anropa funktionen timer_elapsed.
 ********************************************************************************/
 #ifndef TIMER_H_
 #define TIMER_H_
 
 /* Inkluderingsdirektiv: */
-#include <io.h>      /* Innehåller funktioner för att läsa/skriva till godtyckligt I/O-register. */
+#include <io.h>      /* Innehåller funktionalitet för läsning/skrivning till I/O-register. */
 #include <system.h>  /* Innehåller makrodefinitioner för timerkretsar. */
 #include <stdbool.h> /* Innehåller definition av datatypen bool. */
 #include <stdint.h>  /* Innehåller typdefinitioner för diverse heltalstyper såsom uint32_t. */
@@ -61,7 +61,7 @@ static inline void timer_on(struct timer* self)
 }
 
 /********************************************************************************
-* timer_off: Inktiverar refererad timerkrets, vilket medför att det inte går
+* timer_off: Inaktiverar refererad timerkrets, vilket medför att det inte går
 *            att avläsa ifall timern har löpt ut.
 *
 *            - self: Pekare till timern som ska inaktiveras.

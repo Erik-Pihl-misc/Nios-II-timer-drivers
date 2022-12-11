@@ -96,6 +96,7 @@ void timer_disable_hardware(void)
 {
    TIMER_STOP;
    TIMER_RESET;
+   elapsed_time_ms = 0;
    return;
 }
 
@@ -115,11 +116,11 @@ static inline void timer_update(void)
 }
 
 /********************************************************************************
-* timer_has_passed: Uppdaterar antalet passerade millisekunder och indikerar
-*                   ifall angiven tid har passerat. Ifall angiven tid har
-*                   passerat returneras true, annars false.
+* time_has_passed: Uppdaterar antalet passerade millisekunder och indikerar
+*                  ifall angiven tid har passerat. Ifall angiven tid har
+*                  passerat returneras true, annars false.
 *
-*                   - time_ms: Tiden som ska kontrolleras, mätt i millisekunder.
+*                  - time_ms: Tiden som ska kontrolleras, mätt i millisekunder.
 ********************************************************************************/
 static inline bool time_has_passed(const uint32_t time_ms)
 {
